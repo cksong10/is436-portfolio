@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Song — Interaction Designer</title>
+  <meta name="description" content="Interaction and motion designer creating digital experiences that return people to what's alive — their bodies, nature, and community." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Chris <span>Song</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-1 align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item ms-2"><a class="btn-primary" href="contact.html" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="badge-available mb-4 reveal">Available for work</div>
+        <h1 class="display reveal d1" id="hero-heading">
+          Designing the<br>feeling, not just<br>
+          <em>the interface.</em>
+        </h1>
+        <p class="reveal d2" style="max-width: 520px; margin-top: 1.5rem; font-size: 1.05rem;">
+          I'm Chris Song — an interaction and motion designer.
+          My work lives in the 200 milliseconds between a tap and a response.
+          I design that gap to feel <strong>natural</strong>, grounded in how
+          bodies and the living world actually move — so people finish the
+          interaction and look up, not down.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mt-4 reveal d3">
+          <a href="portfolio.html" class="btn-primary">View My Work</a>
+          <a href="about.html"     class="btn-secondary">About Me</a>
+        </div>
+
+        <div class="stat-row reveal d3">
+          <div>
+            <div class="stat-item-num">5</div>
+            <div class="stat-item-label">Case Studies</div>
+          </div>
+          <div>
+            <div class="stat-item-num">UX + Motion</div>
+            <div class="stat-item-label">Disciplines</div>
+          </div>
+          <div>
+            <div class="stat-item-num">IS 436</div>
+            <div class="stat-item-label">Capstone, 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 reveal d2">
+        <!-- Info card -->
+        <div class="card" style="background: var(--bg-2);">
+          <div class="label">Field Classification</div>
+          <div style="display: grid; gap: 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-top: 0.5rem;">
+            <div style="padding: 0.85rem 1rem; border-bottom: 1px solid var(--border);">
+              <div style="font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.25rem;">Discipline</div>
+              <div style="font-size: 0.925rem; color: var(--text); font-weight: 500;">Interaction Design & Motion</div>
+            </div>
+            <div style="padding: 0.85rem 1rem; border-bottom: 1px solid var(--border);">
+              <div style="font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.25rem;">Focus</div>
+              <div style="font-size: 0.925rem; color: var(--green); font-style: italic;">Body · Nature · Community</div>
+            </div>
+            <div style="padding: 0.85rem 1rem; border-bottom: 1px solid var(--border);">
+              <div style="font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.25rem;">Program</div>
+              <div style="font-size: 0.925rem; color: var(--text); font-weight: 500;">B.S. Information Systems, 2026</div>
+            </div>
+            <div style="padding: 0.85rem 1rem;">
+              <div style="font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.25rem;">Status</div>
+              <div style="font-size: 0.925rem; color: var(--green); font-weight: 600;">Open to Work</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section" aria-labelledby="phil-heading">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 reveal">
+        <span class="label">Philosophy</span>
+        <h2 class="h1" id="phil-heading">Interaction is felt before it's understood.</h2>
+        <div class="divider-line"></div>
+        <p>The timing of a fade. The resistance in a swipe. The breath-like pause before a view settles. These are design decisions most interfaces leave to defaults — and they compound into a feeling people can't name but absolutely register.</p>
+        <p class="mt-3">I study how things move in the physical world — leaves decelerating before they land, the spring-back of a branch — and I bring that back to the screen. <strong>When digital motion borrows from nature, people feel it.</strong></p>
+      </div>
+      <div class="col-lg-6 offset-lg-1 reveal d2">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></div>
+              <div class="card-title">Motion</div>
+              <p class="card-body-text">Easing curves drawn from physics, not convention. Transitions that carry meaning rather than fill time.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-icon"><i class="bi bi-water" aria-hidden="true"></i></div>
+              <div class="card-title">Flow</div>
+              <p class="card-body-text">User journeys that follow the logic of the body — not the logic of the database behind them.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-icon clay"><i class="bi bi-scissors" aria-hidden="true" style="color: var(--clay);"></i></div>
+              <div class="card-title">Restraint</div>
+              <p class="card-body-text">Every frame earns its place or gets cut. The pause is part of the motion — silence is a design decision too.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-icon clay"><i class="bi bi-geo-alt" aria-hidden="true" style="color: var(--clay);"></i></div>
+              <div class="card-title">Presence</div>
+              <p class="card-body-text">Interactions designed to end — putting you back in your body, outdoors, or with the people around you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="section section-alt" aria-labelledby="work-heading">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
+      <div class="reveal">
+        <span class="label">Selected Work</span>
+        <h2 class="h1" id="work-heading">Three case studies</h2>
+      </div>
+      <a href="portfolio.html" class="btn-secondary reveal d1">View all work →</a>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-md-4 reveal d1">
+        <div class="project-card">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #1a2e1a, #0f1f10);">🌿</div>
+          <div class="project-content">
+            <div class="project-number">Case Study 01 · Motion · Mobile</div>
+            <h3 class="project-name">Rooted — Outdoor Journal</h3>
+            <p class="project-desc">A journaling app where transitions borrow from organic motion. Every exit leads to stillness, not the next screen.</p>
+            <div class="project-outcome">Anxiety scores −34% vs. standard modal flow. Average session: 90 seconds — by design.</div>
+            <div class="mb-3"><span class="tag">Figma</span><span class="tag">Principle</span><span class="tag">After Effects</span></div>
+            <div class="project-links"><a href="portfolio.html">View Projects →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal d2">
+        <div class="project-card">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #1a1e10, #0f150a);">🏔️</div>
+          <div class="project-content">
+            <div class="project-number">Case Study 03 · Research · Field</div>
+            <h3 class="project-name">Trail Access — Zero Account</h3>
+            <p class="project-desc">A trail conditions tool redesigned for the moment someone is actually on a trail, phone in hand, no patience for sign-up.</p>
+            <div class="project-outcome">Time-to-first-report: 4 min → 38 sec. Completion rate: 23% → 81%.</div>
+            <div class="mb-3"><span class="tag">ProtoPie</span><span class="tag">Figma</span><span class="tag">Field Research</span></div>
+            <div class="project-links"><a href="portfolio.html">View Projects →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal d3">
+        <div class="project-card">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #1e1a10, #150f00);">🌱</div>
+          <div class="project-content">
+            <div class="project-number">Case Study 05 · Mobile · Community</div>
+            <h3 class="project-name">Tend — Garden Coordination</h3>
+            <p class="project-desc">Community garden coordination app designed around the garden's seasonal rhythms — not generic task-management metaphors.</p>
+            <div class="project-outcome">Coordinator group messages −70%. Described as "feeling like the garden, not like Slack."</div>
+            <div class="mb-3"><span class="tag">Figma</span><span class="tag">Framer</span><span class="tag">Field Research</span></div>
+            <div class="project-links"><a href="portfolio.html">View Projects →</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS STRIP -->
+<section class="section" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="label">How I Work</span>
+      <h2 class="h1" id="process-heading">Three-phase process</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal d1">
+        <div class="process-step">
+          <div class="label label-dim mb-2">01 &nbsp;—&nbsp; Research</div>
+          <h3 class="h3 mb-2">Start in the world</h3>
+          <p style="font-size: 0.9rem;">Field observation, contextual interviews, bodystorming. I understand what a person <em>feels</em> before they open the app — before any wireframe exists.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal d2">
+        <div class="process-step">
+          <div class="label label-dim mb-2">02 &nbsp;—&nbsp; Structure</div>
+          <h3 class="h3 mb-2">Logic before visuals</h3>
+          <p style="font-size: 0.9rem;">Information architecture, user flows, and low-fidelity wireframes drawn on paper first. The interaction logic is nailed before Figma opens.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal d3">
+        <div class="process-step">
+          <div class="label label-dim mb-2">03 &nbsp;—&nbsp; Motion</div>
+          <h3 class="h3 mb-2">Prototype to test</h3>
+          <p style="font-size: 0.9rem;">High-fidelity prototypes with full motion specs — easing curves, duration ratios, state transitions — built to test, not to present.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IS 436 STRIP -->
+<section class="section section-alt" aria-labelledby="is436-heading">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-4 reveal">
+        <span class="label">IS 436 · Technical Foundation</span>
+        <h2 class="h1" id="is436-heading">Engineering fluency behind the design.</h2>
+        <div class="divider-line"></div>
+        <p style="font-size: 0.925rem;">Knowing how systems are built changes how I design them. These IS 436 competencies make my interaction design more honest about how things actually behave.</p>
+        <a href="skills.html" class="btn-secondary mt-4" style="display: inline-flex;">Skills & Resume</a>
+      </div>
+      <div class="col-lg-7 offset-lg-1 reveal d2">
+        <div class="row g-2">
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">🔄 SDLC</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">🗄️ Database Design</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">🐳 Docker</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">📐 Wireframing</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">⚙️ System Design</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">🎨 UI/UX Principles</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">🌿 Git & GitHub</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">♿ Accessibility</div></div>
+          <div class="col-6 col-md-4"><div style="padding: 0.85rem 1rem; background: var(--bg-3); border-radius: 8px; border: 1px solid var(--border); font-size: 0.85rem; color: var(--text-2);">🌐 Web Dev</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 reveal">
+        <p class="pull-quote">"The measure of a good interaction is how quickly it disappears — and what it leaves you holding instead."</p>
+        <div class="mt-5">
+          <h2 class="h2 mb-3" id="cta-heading">Want to talk design?</h2>
+          <a href="contact.html" class="btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-sm-4">
+        <div class="footer-brand mb-2">Chris <span>Song</span></div>
+        <p style="font-size: 0.82rem; color: var(--text-3); margin-top: 0.4rem;">Interaction Designer · Motion · UX<br>IS 436 Portfolio, 2026</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="footer-heading">Pages</span>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Work / Projects</a></li>
+          <li><a href="skills.html">Skills & Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <span class="footer-heading">Connect</span>
+        <ul class="footer-nav">
+          <li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble ↗</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="mailto:Chris@example.com">Chris@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color: var(--border); margin-bottom: 1.5rem;" />
+    <div class="d-flex justify-content-between flex-wrap gap-2">
+      <span class="footer-copy">© 2026 Chris Song. Built with Bootstrap 5.</span>
+      <span class="footer-copy">IS 436 Portfolio Project</span>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Chris Song</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    /* ── Form validation states (dark theme) */
+    .was-validated .form-control:invalid,
+    .form-control.is-invalid {
+      border-color: #dc3545 !important;
+      background-image: none;
+    }
+    .was-validated .form-control:valid,
+    .form-control.is-valid {
+      border-color: var(--green) !important;
+      background-image: none;
+    }
+    .invalid-feedback {
+      font-size: 0.78rem;
+      color: #f87171;
+      margin-top: 0.3rem;
+      display: none;
+    }
+    .was-validated .form-control:invalid ~ .invalid-feedback,
+    .form-control.is-invalid ~ .invalid-feedback {
+      display: block;
+    }
+
+    /* ── Form inputs inside card */
+    .contact-form-card .form-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-2);
+      margin-bottom: 0.35rem;
+    }
+    .contact-form-card .form-control,
+    .contact-form-card .form-select {
+      background: var(--bg-3);
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 0.7rem 1rem;
+      font-family: var(--body);
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .contact-form-card .form-control:focus,
+    .contact-form-card .form-select:focus {
+      background: var(--bg-2);
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(113,180,110,0.15);
+      color: var(--text);
+      outline: none;
+    }
+    .contact-form-card .form-select option {
+      background: var(--bg-2);
+      color: var(--text);
+    }
+    .contact-form-card .form-control::placeholder { color: var(--text-3); }
+    .contact-form-card textarea { resize: vertical; min-height: 130px; }
+
+    /* ── Bootstrap card dark override */
+    .contact-form-card.card.shadow {
+      background: var(--bg-2) !important;
+      border: 1px solid var(--border) !important;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5) !important;
+    }
+
+    .required-star { color: var(--clay); margin-left: 2px; }
+
+    /* ── Map section — self-contained */
+    .map-section {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .map-wrapper {
+      height: 380px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      margin-top: 1.25rem;
+    }
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      filter: invert(90%) hue-rotate(180deg) brightness(0.82) saturate(0.65);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Chris <span>Song</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+            aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-1 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item ms-2"><a class="btn-primary" href="contact.html" style="padding:0.5rem 1.25rem;font-size:0.85rem;">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ───────────────────────────── -->
+<section class="page-hero" aria-labelledby="contact-heading">
+  <div class="container">
+    <span class="label">Contact</span>
+    <h1 class="display" id="contact-heading">Let's make<br>something <em>worth feeling.</em></h1>
+    <p style="max-width:520px; margin-top:1.25rem; font-size:1.05rem;">
+      I'm most interested in teams where interaction quality is taken seriously.
+      If that sounds like yours, I'd love to hear from you.
+    </p>
+  </div>
+</section>
+
+<!-- ── CONTACT INFO + FORM ─────────────────── -->
+<section class="section" aria-labelledby="contact-body-h">
+  <div class="container">
+    <!-- align-items-start stops the shorter col from stretching to match the taller one -->
+    <div class="row g-5 align-items-start">
+
+      <!-- LEFT: Contact info -->
+      <div class="col-lg-4 reveal">
+        <span class="label">Direct Contact</span>
+        <h2 class="h2 mb-4" id="contact-body-h">Reach me directly</h2>
+
+        <a class="contact-item" href="mailto:Chris@example.com" aria-label="Email Chris">
+          <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">cksong0313@gmail.com</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/ChrisSong" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">in/cksong10 ↗</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://github.com/ChrisSong" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="bi bi-github"></i></div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">cksong10 ↗</div>
+          </div>
+        </a>
+        <div class="contact-item" style="cursor:default;">
+          <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Ellicott City, MD · Remote OK</div>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="card mt-4" style="border-color:rgba(113,180,110,0.3);">
+          <div class="badge-available mb-3">Available now</div>
+          <p class="card-body-text mb-2">Open to internships, full-time, and select freelance — especially health, wellness, outdoor, or community products.</p>
+          <p class="card-body-text"><strong style="color:var(--text);">Full-time from May 2026.</strong></p>
+        </div>
+
+        <!-- Best fit -->
+        <div class="card mt-3">
+          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.75rem;">Best fit for</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.875rem;color:var(--text-2);">→ Interaction Design</div>
+            <div style="font-size:0.875rem;color:var(--text-2);">→ Motion / Animation</div>
+            <div style="font-size:0.875rem;color:var(--text-2);">→ Product Design</div>
+            <div style="font-size:0.875rem;color:var(--text-2);">→ UX Research</div>
+            <div style="font-size:0.875rem;color:var(--text-2);">→ Design Systems</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form in Bootstrap card shadow -->
+      <div class="col-lg-7 offset-lg-1 reveal d2">
+        <span class="label">Send a Message</span>
+        <h2 class="h2 mb-4" id="contact-form-h">Leave me a note</h2>
+
+        <!-- ✅ Success alert — hidden until submit -->
+        <div id="form-success"
+             class="alert alert-success d-none d-flex align-items-center gap-2 mb-4"
+             role="alert">
+          <i class="bi bi-check-circle-fill fs-5"></i>
+          <div>
+            <strong>Message sent!</strong> Thanks for reaching out — I'll be in touch within 24 hours.
+          </div>
+        </div>
+
+        <!-- ✅ Bootstrap card shadow -->
+        <div class="card shadow contact-form-card">
+          <form id="contact-form" class="needs-validation" novalidate
+                aria-labelledby="contact-form-h">
+            <div class="row g-3">
+
+              <!-- Name -->
+              <div class="col-sm-6">
+                <label for="name" class="form-label">
+                  Your name<span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="name" name="name" class="form-control"
+                       placeholder="Jane Smith" required autocomplete="name" />
+                <div class="invalid-feedback">
+                  <i class="bi bi-exclamation-circle me-1"></i>Please enter your name.
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-sm-6">
+                <label for="email" class="form-label">
+                  Email address<span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="email" name="email" class="form-control"
+                       placeholder="jane@company.com" required autocomplete="email" />
+                <div class="invalid-feedback">
+                  <i class="bi bi-exclamation-circle me-1"></i>Please enter a valid email.
+                </div>
+              </div>
+
+              <!-- Organisation -->
+              <div class="col-12">
+                <label for="org" class="form-label">Team or project</label>
+                <input type="text" id="org" name="org" class="form-control"
+                       placeholder="Where are you building from?" />
+              </div>
+
+              <!-- Subject -->
+              <div class="col-12">
+                <label for="subject" class="form-label">
+                  Subject<span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="subject" name="subject" class="form-control"
+                       placeholder="Role, collaboration, question…" required />
+                <div class="invalid-feedback">
+                  <i class="bi bi-exclamation-circle me-1"></i>Please enter a subject.
+                </div>
+              </div>
+
+              <!-- Inquiry type -->
+              <div class="col-12">
+                <label for="type" class="form-label">Inquiry type</label>
+                <select id="type" name="type" class="form-select">
+                  <option value="" disabled selected>Select a reason…</option>
+                  <option value="job">Job / Internship Opportunity</option>
+                  <option value="freelance">Freelance Project</option>
+                  <option value="collab">Collaboration</option>
+                  <option value="feedback">Portfolio Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <label for="message" class="form-label">
+                  Message<span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <textarea id="message" name="message" class="form-control" rows="5"
+                  placeholder="What are you building? What does the interaction problem look like?"
+                  required minlength="20"></textarea>
+                <div class="invalid-feedback">
+                  <i class="bi bi-exclamation-circle me-1"></i>Please write at least 20 characters.
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="col-12 mt-1">
+                <button type="submit" class="btn-primary w-100"
+                        style="text-align:center;cursor:pointer;">
+                  Send Message
+                </button>
+                <p style="font-size:0.78rem;color:var(--text-3);text-align:center;margin-top:0.75rem;">
+                  Fields marked <span style="color:var(--clay);">*</span> are required.
+                  I typically respond within 24 hours.
+                </p>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- /.card -->
+      </div>
+    </div><!-- /.row -->
+  </div>
+</section>
+
+<!-- ── MAP — its own section, cleanly below everything ── -->
+<section class="map-section" aria-labelledby="map-heading">
+  <div class="container">
+    <div class="row align-items-center g-3 mb-2">
+      <div class="col">
+        <h3 class="h3 mb-0" id="map-heading">Find me here</h3>
+        <p style="font-size:0.875rem;color:var(--text-2);margin-top:0.25rem;">
+          Currently based in Ellicott City, MD — open to remote work worldwide.
+        </p>
+      </div>
+      <div class="col-auto">
+        <span style="font-size:0.72rem;font-family:var(--mono);letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);">
+          <i class="bi bi-info-circle me-1"></i>Replace embed URL with your location
+        </span>
+      </div>
+    </div>
+
+    <!-- ✅ Fixed-height map wrapper — no ratio class bleeding -->
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976369901139!3d40.69766374859129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Location map"
+        aria-label="Google Map showing general location"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ─────────────────────────────────── -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="label">Common Questions</span>
+      <h2 class="h1" id="faq-heading">Good to know</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal d1">
+        <div class="card">
+          <div class="card-title mb-2">What kind of roles?</div>
+          <p class="card-body-text">Interaction designer, motion designer, product designer — with a preference for teams where the felt quality of interactions is taken seriously, not treated as polish.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal d2">
+        <div class="card">
+          <div class="card-title mb-2">What domains?</div>
+          <p class="card-body-text">Health, wellness, outdoor, community, and civic tools. Products that care about where people's bodies are and what they're doing in the physical world.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal d3">
+        <div class="card">
+          <div class="card-title mb-2">Availability?</div>
+          <p class="card-body-text">Up to 20 hrs/week during my final semester. Fully available and excited to start a full-time role from May 2026 onward.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-sm-4">
+        <div class="footer-brand mb-2">Chris <span>Song</span></div>
+        <p style="font-size:0.82rem;color:var(--text-3);margin-top:0.4rem;">Interaction Designer · Motion · UX<br>IS 436 Portfolio, 2026</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="footer-heading">Pages</span>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Work / Projects</a></li>
+          <li><a href="skills.html">Skills & Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <span class="footer-heading">Connect</span>
+        <ul class="footer-nav">
+          <li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble ↗</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="mailto:Chris@example.com">Chris@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color:var(--border);margin-bottom:1.5rem;" />
+    <div class="d-flex justify-content-between flex-wrap gap-2">
+      <span class="footer-copy">© 2026 Chris Song. Built with Bootstrap 5.</span>
+      <span class="footer-copy">IS 436 Portfolio Project</span>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form    = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      form.classList.add('was-validated');
+
+      if (!form.checkValidity()) {
+        // Scroll first invalid field into view
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      const btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        success.classList.remove('d-none');
+        form.reset();
+        form.classList.remove('was-validated');
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 800);
+    });
+
+    form.addEventListener('input', () => {
+      if (!success.classList.contains('d-none')) success.classList.add('d-none');
+    });
+  });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

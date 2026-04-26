@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work / Projects — Chris Song</title>
+  <meta name="description" content="IS 436 project portfolio — systems analysis, UML, database design, and prototyping work." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Chris <span>Song</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+            aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-1 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="portfolio.html">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item ms-2"><a class="btn-primary" href="contact.html" style="padding:0.5rem 1.25rem;font-size:0.85rem;">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-labelledby="work-heading">
+  <div class="container">
+    <span class="label">Portfolio / Projects</span>
+    <h1 class="display" id="work-heading">IS 436 project<br><em>deliverables.</em></h1>
+    <p style="max-width:580px; margin-top:1.25rem; font-size:1.05rem;">
+      Six projects built across a full semester of systems analysis and design.
+      Each one was delivered to a real brief — not a toy exercise.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS GRID -->
+<section class="section" aria-labelledby="projects-label">
+  <div class="container">
+    <h2 class="visually-hidden" id="projects-label">All Projects</h2>
+
+    <!-- ✅ Bootstrap button group filter bar -->
+    <div class="d-flex align-items-center gap-3 flex-wrap mb-4">
+      <div class="btn-group" role="group" aria-label="Filter projects by category">
+        <button type="button" class="btn btn-sm filter-btn active" data-filter="all"
+                style="border-radius:6px 0 0 6px;">All</button>
+        <button type="button" class="btn btn-sm filter-btn" data-filter="analysis">Analysis</button>
+        <button type="button" class="btn btn-sm filter-btn" data-filter="modeling">Modeling</button>
+        <button type="button" class="btn btn-sm filter-btn" data-filter="database">Database</button>
+        <button type="button" class="btn btn-sm filter-btn" data-filter="design">Design</button>
+        <button type="button" class="btn btn-sm filter-btn" data-filter="capstone"
+                style="border-radius:0 6px 6px 0;">Capstone</button>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- ── PROJECT 1 ────────────────────────────────── -->
+      <div id="project1" class="col-md-6 col-lg-4 reveal d1" data-cat="analysis">
+        <div class="project-card h-100">
+
+          <!-- ✅ card-img-top screenshot -->
+          <img
+            class="card-img-top"
+            src="https://placehold.co/600x240/1a1a17/71b46e?text=System+Requirements&font=montserrat"
+            alt="System Requirements Document screenshot"
+            style="height:180px; object-fit:cover;"
+          />
+
+          <div class="project-content">
+            <div class="project-number">Project 1 · Analysis Documentation</div>
+            <h3 class="project-name">System Requirements Document</h3>
+            <p class="project-desc">Analyzed a real-world business problem and documented functional and non-functional requirements using structured templates. Covered scope, stakeholders, constraints, and acceptance criteria.</p>
+            <div class="project-outcome">Delivered a complete SRS document following IEEE standards with 30+ clearly traced requirements.</div>
+            <div class="mb-3">
+              <span class="tag">Requirements Analysis</span>
+              <span class="tag">IEEE SRS</span>
+              <span class="tag">Stakeholder Interviews</span>
+            </div>
+            <div class="project-links d-flex align-items-center gap-3">
+              <!-- ✅ View Details links to project detail page -->
+              <a href="portfolio.html#project1" class="project-link">View Details →</a>
+              <!-- ✅ GitHub icon link -->
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="View on GitHub"
+                 style="color:var(--text-3); font-size:1.1rem; transition:color 0.2s;">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 2 ────────────────────────────────── -->
+      <div id="project2" class="col-md-6 col-lg-4 reveal d2" data-cat="modeling">
+        <div class="project-card h-100">
+          <img
+            class="card-img-top"
+            src="https://placehold.co/600x240/1a1a17/4aa8c0?text=Use+Case+Diagrams&font=montserrat"
+            alt="Use Case Diagrams screenshot"
+            style="height:180px; object-fit:cover;"
+          />
+          <div class="project-content">
+            <div class="project-number">Project 2 · UML Use Cases</div>
+            <h3 class="project-name">Use Case Diagrams</h3>
+            <p class="project-desc">Designed use case diagrams and user stories to model interactions between users and the proposed system. Identified primary and secondary actors, system boundaries, and all major use cases.</p>
+            <div class="project-outcome">Produced 8 use case diagrams with fully expanded use case specifications and traceability matrix.</div>
+            <div class="mb-3">
+              <span class="tag">UML</span>
+              <span class="tag">Use Cases</span>
+              <span class="tag">User Stories</span>
+            </div>
+            <div class="project-links d-flex align-items-center gap-3">
+              <a href="portfolio.html#project2" class="project-link">View Details →</a>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="View on GitHub"
+                 style="color:var(--text-3); font-size:1.1rem; transition:color 0.2s;">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 3 ────────────────────────────────── -->
+      <div id="project3" class="col-md-6 col-lg-4 reveal d3" data-cat="modeling">
+        <div class="project-card h-100">
+          <img
+            class="card-img-top"
+            src="https://placehold.co/600x240/1a1a17/c49a4a?text=Data+Flow+Diagrams&font=montserrat"
+            alt="Data Flow Diagrams screenshot"
+            style="height:180px; object-fit:cover;"
+          />
+          <div class="project-content">
+            <div class="project-number">Project 3 · DFD Modeling</div>
+            <h3 class="project-name">Data Flow Diagrams</h3>
+            <p class="project-desc">Created context-level and level-1 DFDs to illustrate how data moves through the system. Mapped all external entities, processes, data stores, and data flows using Yourdon-DeMarco notation.</p>
+            <div class="project-outcome">Context diagram plus 6 level-1 DFDs covering all major subsystems with complete data dictionary.</div>
+            <div class="mb-3">
+              <span class="tag">DFD</span>
+              <span class="tag">Process Modeling</span>
+              <span class="tag">Yourdon-DeMarco</span>
+            </div>
+            <div class="project-links d-flex align-items-center gap-3">
+              <a href="portfolio.html#project3" class="project-link">View Details →</a>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="View on GitHub"
+                 style="color:var(--text-3); font-size:1.1rem; transition:color 0.2s;">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 4 ────────────────────────────────── -->
+      <div id="project4" class="col-md-6 col-lg-4 reveal d1" data-cat="database">
+        <div class="project-card h-100">
+          <img
+            class="card-img-top"
+            src="https://placehold.co/600x240/1a1a17/d4785a?text=ER+Diagram&font=montserrat"
+            alt="Entity-Relationship Diagram screenshot"
+            style="height:180px; object-fit:cover;"
+          />
+          <div class="project-content">
+            <div class="project-number">Project 4 · ERD Database</div>
+            <h3 class="project-name">Entity-Relationship Diagram</h3>
+            <p class="project-desc">Built an ER diagram to model the database structure for the proposed information system. Applied normalization (3NF), defined primary and foreign keys, cardinality, and relationship constraints.</p>
+            <div class="project-outcome">Fully normalized schema (3NF) with 12 entities, 18 relationships, and complete attribute definitions.</div>
+            <div class="mb-3">
+              <span class="tag">ERD</span>
+              <span class="tag">3NF Normalization</span>
+              <span class="tag">Database Design</span>
+            </div>
+            <div class="project-links d-flex align-items-center gap-3">
+              <a href="portfolio.html#project4" class="project-link">View Details →</a>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="View on GitHub"
+                 style="color:var(--text-3); font-size:1.1rem; transition:color 0.2s;">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 5 ────────────────────────────────── -->
+      <div id="project5" class="col-md-6 col-lg-4 reveal d2" data-cat="design">
+        <div class="project-card h-100">
+          <img
+            class="card-img-top"
+            src="https://placehold.co/600x240/1a1a17/71b46e?text=Prototype+%2F+Mockup&font=montserrat"
+            alt="Prototype and Mockup screenshot"
+            style="height:180px; object-fit:cover;"
+          />
+          <div class="project-content">
+            <div class="project-number">Project 5 · UI/UX Prototype</div>
+            <h3 class="project-name">Prototype / Mockup</h3>
+            <p class="project-desc">Designed a low-fidelity prototype of the system interface using wireframing tools and gathered user feedback. Applied IS 436 UI/UX principles — visual hierarchy, accessibility, and consistent branding throughout.</p>
+            <div class="project-outcome">12-screen wireframe prototype, usability tested with 6 participants. 3 design iterations based on feedback.</div>
+            <div class="mb-3">
+              <span class="tag">Figma</span>
+              <span class="tag">Wireframing</span>
+              <span class="tag">Usability Testing</span>
+              <span class="tag">Accessibility</span>
+            </div>
+            <div class="project-links d-flex align-items-center gap-3">
+              <a href="portfolio.html#project5" class="project-link">View Details →</a>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="View on GitHub"
+                 style="color:var(--text-3); font-size:1.1rem; transition:color 0.2s;">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── FINAL PROJECT ───────────────────────────── -->
+      <div id="final" class="col-md-6 col-lg-4 reveal d3" data-cat="capstone">
+        <div class="project-card h-100" style="border-color: rgba(196,154,74,0.35);">
+          <img
+            class="card-img-top"
+            src="https://placehold.co/600x240/281d08/c49a4a?text=Final+Project&font=montserrat"
+            alt="Complete System Proposal screenshot"
+            style="height:180px; object-fit:cover;"
+          />
+          <div class="project-content">
+            <div class="project-number" style="color:var(--amber);">Final Project · Capstone Presentation</div>
+            <h3 class="project-name" style="color:var(--amber);">Complete System Proposal</h3>
+            <p class="project-desc">Combined all deliverables — SRS, use cases, DFDs, ERD, and prototype — into a full system analysis report and presented the solution to stakeholders. Demonstrated end-to-end mastery of the SDLC.</p>
+            <div class="project-outcome" style="border-left-color:var(--amber); color:var(--amber);">Full 60-page system proposal delivered and presented to a panel. Received distinction for documentation quality.</div>
+            <div class="mb-3">
+              <span class="tag">SDLC</span>
+              <span class="tag">Systems Analysis</span>
+              <span class="tag">Technical Writing</span>
+              <span class="tag">Presentation</span>
+            </div>
+            <div class="project-links d-flex align-items-center gap-3">
+              <a href="portfolio.html#final" class="project-link" style="color:var(--amber);">View Details →</a>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="View on GitHub"
+                 style="color:var(--text-3); font-size:1.1rem; transition:color 0.2s;">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+
+    <!-- Wireframe note -->
+    <div class="mt-4 reveal">
+      <div style="background:var(--bg-2); border:1px solid var(--border); border-left:3px solid var(--clay); border-radius:8px; padding:1.25rem 1.5rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <span style="font-size:1.2rem;" aria-hidden="true">📐</span>
+        <div>
+          <div style="font-weight:600; font-size:0.9rem; color:var(--text); margin-bottom:0.15rem;">Wireframe Documentation</div>
+          <p style="font-size:0.85rem; margin:0;">All projects include PDF wireframe diagrams created before any code was written — a required IS 436 deliverable. <a href="#" style="color:var(--clay);">View wireframes PDF →</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-sm-4"><div class="footer-brand mb-2">Chris <span>Song</span></div><p style="font-size:0.82rem;color:var(--text-3);margin-top:0.4rem;">Interaction Designer · Motion · UX<br>IS 436 Portfolio, 2026</p></div>
+      <div class="col-sm-4"><span class="footer-heading">Pages</span><ul class="footer-nav"><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="portfolio.html">Work / Projects</a></li><li><a href="skills.html">Skills & Resume</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="col-sm-4"><span class="footer-heading">Connect</span><ul class="footer-nav"><li><a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble ↗</a></li><li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li><li><a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a></li><li><a href="mailto:Chris@example.com">Chris@example.com</a></li></ul></div>
+    </div>
+    <hr style="border-color:var(--border);margin-bottom:1.5rem;" />
+    <div class="d-flex justify-content-between flex-wrap gap-2"><span class="footer-copy">© 2026 Chris Song. Built with Bootstrap 5.</span><span class="footer-copy">IS 436 Portfolio Project</span></div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
